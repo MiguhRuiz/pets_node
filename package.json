@@ -1,0 +1,15 @@
+{
+  "name": "pets_node",
+  "version": "1.0.0",
+  "description": "Web application representing Dogs and Cats. ",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/MiguhRuiz/pets_node.git",
+    "type": "git"
+  },
+  "author": "Miguh Ruiz <miguhruiz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
