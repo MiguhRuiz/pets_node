@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
 const dogAPI = require('./api/dogs')
+const catAPI = require('./api/cats')
 
 const app = express()
 
@@ -24,6 +25,13 @@ app.get('/api/dogs/:id', dogAPI.getDog)
 app.post('/api/dogs', dogAPI.postDog)
 app.put('/api/dogs/:id', dogAPI.updateDog)
 app.delete('/api/dogs/:id', dogAPI.deleteDog)
+
+// Cats API
+app.get('/api/cats', catAPI.getCats)
+app.get('/api/cats/:id', catAPI.getCat)
+app.post('/api/cats', catAPI.postCat)
+app.put('/api/cats/:id', catAPI.updateCat)
+app.delete('/api/cats/:id', catAPI.deleteCat)
 
 
 app.listen(port, () => {

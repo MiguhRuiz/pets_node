@@ -1,8 +1,8 @@
-const Dog = require('../models/dog')
+const Cat = require('../models/cat')
 
 module.exports = {
-    getDogs: function (req, res) {
-                Dog.find((err, docs) => {
+    getCats: function (req, res) {
+                Cat.find((err, docs) => {
                     if(err) {
                         res.status(500)
                         res.json(err)
@@ -11,8 +11,8 @@ module.exports = {
                     res.json(docs)
                 })
             },
-    getDog: function (req, res) {
-                Dog.findById(req.params.id, (err, doc) => {
+    getCat: function (req, res) {
+                Cat.findById(req.params.id, (err, doc) => {
                     if(err) {
                         res.status(500)
                         res.json(err)
@@ -21,8 +21,8 @@ module.exports = {
                     res.json(doc)
                 })
             },
-    postDog: function (req, res) {
-                Dog.create(req.body, (err, doc) => {
+    postCat: function (req, res) {
+                Cat.create(req.body, (err, doc) => {
                     if(err) {
                         res.status(500)
                         res.json(err)
@@ -31,8 +31,8 @@ module.exports = {
                     res.json(doc)
                 })
             },
-    updateDog: function (req, res) {
-                    Dog.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, doc) => {
+    updateCat: function (req, res) {
+                    Cat.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, doc) => {
                         if(err) {
                             res.status(500)
                             res.json(err)
@@ -41,8 +41,8 @@ module.exports = {
                         res.json(doc)
                     })
                 },
-    deleteDog: function (req, res) {
-                    Dog.findByIdAndRemove(req.params.id, (err, doc) => {
+    deleteCat: function (req, res) {
+                    Cat.findByIdAndRemove(req.params.id, (err, doc) => {
                         if(err) {
                             res.status(500)
                             res.json(err)
